@@ -4,21 +4,19 @@ version := "0.1.0-SNAPSHOT"
 scalaVersion := "2.13.5"
 crossScalaVersions := Seq("2.13.5", "2.12.13")
 
-scalacOptions ++= {
-  val common = Seq(
-    "-feature",
-    "-deprecation",
-    "-language:higherKinds",
-    "-Ywarn-unused:implicits",
-    "-Ywarn-unused:imports",
-    "-Ywarn-unused:locals",
-    "-Ywarn-unused:params",
-    "-Ywarn-unused:patvars",
-    "-Ywarn-unused:privates",
-    //https://stackoverflow.com/questions/56351793
-    "-Ywarn-macros:after"
-  )
-}
+scalacOptions ++= Seq(
+  "-feature",
+  "-deprecation",
+  "-language:higherKinds",
+  "-Ywarn-unused:implicits",
+  "-Ywarn-unused:imports",
+  "-Ywarn-unused:locals",
+  "-Ywarn-unused:params",
+  "-Ywarn-unused:patvars",
+  "-Ywarn-unused:privates",
+  //https://stackoverflow.com/questions/56351793
+  "-Ywarn-macros:after"
+)
 
 libraryDependencies ++= Seq(
   "com.google.cloud" % "google-cloud-bigquery" % "1.137.1"
