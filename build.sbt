@@ -19,7 +19,8 @@ scalacOptions ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.google.cloud" % "google-cloud-bigquery" % "1.137.1"
+  "com.google.cloud" % "google-cloud-bigquery" % "1.137.1",
+  "org.scala-lang.modules" %% "scala-collection-compat" % "2.4.3"
 )
 
 organization := "net.pishen"

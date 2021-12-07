@@ -5,7 +5,7 @@ import com.google.cloud.bigquery.QueryParameterValue
 import com.google.cloud.bigquery.StandardSQLTypeName
 
 import java.lang
-import scala.collection.JavaConverters._
+import scala.jdk.CollectionConverters._
 
 case class BQL(statement: String, params: Seq[QueryParameterValue]) {
   def queryConfigBuilder =
