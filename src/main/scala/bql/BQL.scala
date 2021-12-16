@@ -18,11 +18,10 @@ case class BQL(statement: String, params: Seq[QueryParameterValue]) {
 object BQL {
   def create(sc: StringContext, args: Any*) = {
     val parts = sc.parts
-    assert(parts.size == args.size + 1)
-    val stmt = parts.tail.zip(args).foldLeft(parts.head) {
-      case (stmt, (part, bql: BQL)) =>
+    val stmt = args.zip(parts.tail).foldLeft(parts.head) {
+      case (stmt, (bql: BQL, part)) =>
         stmt + bql.statement + part
-      case (stmt, (part, _)) =>
+      case (stmt, (_, part)) =>
         stmt + "?" + part
     }
     val params = args.flatMap {
