@@ -1,9 +1,9 @@
 package bql
 
-import org.scalatest.flatspec.AnyFlatSpec
 import com.google.cloud.bigquery.QueryJobConfiguration
 import com.google.cloud.bigquery.QueryParameterValue
 import com.google.cloud.bigquery.StandardSQLTypeName
+import org.scalatest.flatspec.AnyFlatSpec
 
 class BQLSpec extends AnyFlatSpec {
   "BQL" should "build a query config using string interpolation" in {
