@@ -1,6 +1,6 @@
 name := "bql"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.0"
 scalaVersion := "2.13.5"
 crossScalaVersions := Seq("2.13.5", "2.12.13")
 
